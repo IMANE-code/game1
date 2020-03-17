@@ -40,14 +40,7 @@ body{
     color: hsl(229, 64%, 46%);
     text-align: center;
 }
-#result-score{  
-    border: none;
-    width: 60px;
-    height: 40px;
-    font-size: xx-large;
-    outline: 0;
-    text-align: center;
-}
+
 #span-general{
     width: 100px;
     height: 80px;

@@ -1,7 +1,13 @@
 var radio3 = document.getElementsByName("radioname3");
 var radio1 = document.getElementsByName("radioname1");
 var radio2 = document.getElementsByName("radioname2");
- 
+
+function score() {
+  var result = 0;
+  result = result + 1;
+  document.getElementById('score').textContent = result;
+}
+
 function You_Win() {
   var picked2 = document.getElementById("picked2");
   if (((radio2[0].style.display == 'block') && (radio3[1].style.display == 'block')) ||
@@ -10,11 +16,7 @@ function You_Win() {
     picked2.textContent = "YOU WIN";
     picked2.style.color = "rgb(38, 226, 38)";
     picked2.style.textShadow = "0 0 10px white";
-
-    var result = 0;
-     result  = result + 1;
-     document.getElementById('result-score').value = result;
-     document.getElementById('result-score').textContent= result; 
+    score();
   }
 }
 
@@ -61,5 +63,5 @@ function rules() {
   form.style.display = "block";
 }
 function play_again() {
-  location.reload();
-}
+    location.reload();
+  }
