@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Rock Papper Scissors</title>
+  <script src="javascript.js"></script>
+</head>
+
+<body>
+  <article id="general">
+    <div id="rock-paper">
+      <img src="images/logo.svg" alt="logo" />
+      <span id="span-general">
+        <div id="spanScore">SCORE</div>
+        <input type="text" id="result-score" style="text-align: center;padding:10px;" placeholder="0">
+      </span>
+    </div>
+
+    <div id="form1">
+      <section id="grid">
+        <input type="radio" name="radioname1" id="rd1" onclick="jouer()" />
+        <input type="radio" name="radioname1" id="rd2" onclick="jouer()" />
+        <input type="radio" name="radioname1" id="rd3" onclick="jouer()" />
+      </section>
+    </div>
+
+    <div id="form2" style="display:none;">
+      <section id="grid2">
+        <div id="joeur">
+          <h1 id="picked1" style="color: white;padding: 40px;">your picked</h1>
+          <input type="radio" name="radioname2" id="rd1-2" onclick="" style="display: none;" />
+          <input type="radio" name="radioname2" id="rd2-2" onclick="" style="display: none;" />
+          <input type="radio" name="radioname2" id="rd3-2" onclick="" style="display: none;" />
+        </div>
+        <div id="win-lost">
+          <h1 id="picked2" style="color:white;font-size:35px; padding: 40px;"></h1>
+          <button id="play-again" onclick="play_again()">Play Again</button>
+        </div>
+        <div id="ordinateur">
+          <h1 id="picked3" style="color: white;padding: 40px;">The house picked</h1>
+          <input type="radio" name="radioname3" id="rd1-2" style="display: none;" />
+          <input type="radio" name="radioname3" id="rd2-2" style="display: none;" />
+          <input type="radio" name="radioname3" id="rd3-2" style="display: none;" />
+        </div>
+      </section>
+    </div>
+
+    <button id="rules" onclick="rules()">RULES</button>
+
+
+    <section id="form-popup">
+      <span style="float: left;font-size: x-large;color: darkblue;">RULES</span>
+
+      <img src="images/icon-close.svg" Onclick="document.getElementById('form-popup').style.display='none'"
+        id="img-close" />
+
+      <img src="images/bonus1.png" style="width:220px;height:200px;padding:20px;">
+    </section>
+  </article>
+
+</body>
+
+</html>
