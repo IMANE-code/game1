@@ -1,16 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:400,600,700&display=swap');
-*{
+
+* {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
     font-family: 'Barlow Semi Condensed', sans-serif;
 }
-body{
-    background-image: linear-gradient(90deg,hsl(237, 49%, 15%),hsl(214, 47%, 23%),hsl(237, 49%, 15%));
+
+body {
+    background-image: linear-gradient(90deg, hsl(237, 49%, 15%), hsl(214, 47%, 23%), hsl(237, 49%, 15%));
     background-repeat: no-repeat;
-    height: 100vh; 
+    height: 100vh;
+    max-width: 1366px;
+    text-align: center;
 }
-#form-popup{
+
+#form-popup {
     width: 250px;
     height: 250px;
     background-color: white;
@@ -21,27 +26,29 @@ body{
     transform: translateY(-282px);
 }
 
-    
-#rock-paper img{
+
+#rock-paper img {
     padding: 10px;
     width: 100px;
     height: 100px;
 }
-#rock-paper{
+
+#rock-paper {
     display: flex;
     justify-content: space-between;
     width: 500px;
-    border: 3px solid  hsl(217, 16%, 45%);
-    margin: 50px auto;
+    border: 3px solid hsl(217, 16%, 45%);
+    margin: 30px auto;
     padding: 10px;
     border-radius: 15px;
 }
-#spanScore{
+
+#spanScore {
     color: hsl(229, 64%, 46%);
     text-align: center;
 }
 
-#span-general{
+#span-general {
     width: 100px;
     height: 80px;
     background-color: white;
@@ -50,21 +57,23 @@ body{
     box-shadow: 0 0px 10px;
     text-align: center;
 }
-#grid{
+
+#grid {
     padding: 30px;
     padding-bottom: 0px;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     width: 420px;
     margin: 0 auto;
 }
+
 input[type="radio"] {
-   
+
     -webkit-appearance: none;
     border: none;
     width: 150px;
-    height: 150px;   
+    height: 150px;
     background-repeat: no-repeat;
     box-shadow: 0 0px 20px;
     border-radius: 100px;
@@ -72,70 +81,86 @@ input[type="radio"] {
     outline: 0;
     cursor: pointer;
 }
-#rd1,#rd1-2{
-    background: url(images/icon-scissors.svg)  center no-repeat; 
+
+#rd1,
+#rd1-2 {
+    background: url(images/icon-scissors.svg) center no-repeat;
     background-color: white;
     border: 15px solid orange;
-    grid-row:1/2 ;
-    grid-column:2/3;
+    grid-row: 1/2;
+    grid-column: 2/3;
     margin: 0 auto;
 }
-#rd2,#rd2-2{
-    background: url(images/icon-paper.svg)  center no-repeat;  
+
+#rd2,
+#rd2-2 {
+    background: url(images/icon-paper.svg) center no-repeat;
     background-color: white;
     border: 15px solid blue;
     grid-row: 1/2;
     grid-column: 1/2;
     margin: 0 auto;
 }
-#rd3,#rd3-2{
-    background: url(images/icon-rock.svg)  center no-repeat;  
-     background-color: white;
-     border: 15px solid red;
-     grid-row:2/3 ;
-    grid-column:1/3 ;
+
+#rd3,
+#rd3-2 {
+    background: url(images/icon-rock.svg) center no-repeat;
+    background-color: white;
+    border: 15px solid red;
+    grid-row: 2/3;
+    grid-column: 1/3;
     margin: 0 auto;
 }
-#rules{
+
+#rules {
     width: 120px;
     height: 40px;
     color: white;
-    background-color:hsl(237, 49%, 15%);
+    background-color: hsl(237, 49%, 15%);
     border-radius: 8px;
     outline: 0;
     border: 1px solid white;
-    float: right;
-    margin-right: 20px;
     cursor: pointer;
 }
-#img-close{
+
+#button_rules {
+    float: right;
+    padding: 20px;
+}
+
+#img-close {
     cursor: pointer;
     float: right;
 }
-#grid2{
+
+#grid2 {
     display: grid;
-    width:800px;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(3,1fr);
+    width: 800px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     padding: 50px;
     text-align: center;
     margin: 0 auto;
 }
-#joeur{
+
+#joeur {
     grid-row: 1/4;
-    grid-column:1/2 ;
+    grid-column: 1/2;
 }
-#win-lost{
+
+#win-lost {
     grid-row: 1/4;
-    grid-column:2/3 ;
+    grid-column: 2/3;
 }
-#ordinateur{
+
+#ordinateur {
     grid-row: 1/4;
     grid-column: 3/4;
 }
-#play-again{
+
+#play-again {
     width: 150px;
-    height:45px;
+    height: 45px;
     background-color: white;
     border-radius: 5px;
     font-size: large;
@@ -144,6 +169,135 @@ input[type="radio"] {
     cursor: pointer;
     box-shadow: 0 4px 10px black;
 }
-#play-again:hover{
+
+#play-again:hover {
     color: red;
+}
+@media (max-width:900px) {
+    #grid2{
+        width:100%;
+    }
+}
+@media (max-width:600px) {
+    body {
+        
+        height: 100%;
+    }
+
+    #form1 {
+        text-align: center;
+    }
+
+    #rock-paper {
+        width: 350px;
+    }
+
+    #rules {
+        width: 180px;
+        height: 46px;
+    }
+
+    #button_rules {
+        float: none;
+        text-align: center;
+    }
+
+    input[type="radio"] {
+        width: 120px;
+        height: 120px;
+    }
+
+    #rd1,
+    #rd1-2 {
+        border: 10px solid orange;
+    }
+
+    #rd2,
+    #rd2-2 {
+        border: 10px solid blue;
+    }
+
+    #rd3,
+    #rd3-2 {
+        border: 10px solid red;
+    }
+    #grid2{
+        display: grid;
+        width:100%;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        text-align: center;
+        margin: 0 auto;
+        padding: 10px;
+    }
+    #joeur {
+        grid-row: 1/2;
+        grid-column: 1/2;
+        font-size: small;
+    }
+    
+    
+    #ordinateur {
+        grid-row: 1/2;
+        grid-column: 2/3;
+        font-size: small;
+    }
+
+    #win-lost {
+        grid-row: 2/3;
+        grid-column: 1/3;
+    }
+    
+}
+
+@media (max-width:375px) {
+    body {
+        height: 130vh;
+    }
+
+    #form1 {
+        text-align: center;
+    }
+
+    #rock-paper {
+        width: 200px;
+    }
+
+    #rules {
+        width: 180px;
+        height: 46px;
+    }
+
+    #button_rules {
+        float: none;
+        text-align: center;
+    }
+
+    input[type="radio"] {
+        width: 90px;
+        height: 90px;
+    }
+
+    #rd1,
+    #rd1-2 {
+        border: 8px solid orange;
+    }
+
+    #rd2,
+    #rd2-2 {
+        border: 8px solid blue;
+    }
+
+    #rd3,
+    #rd3-2 {
+        border: 8px solid red;
+    }
+    #joeur {
+        font-size: xx-small;
+    }
+    
+    
+    #ordinateur {
+        font-size: xx-small;
+    }
 }

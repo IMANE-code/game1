@@ -12,7 +12,7 @@ function Egal() {
   if (((radio2[0].style.display == 'block') && (radio3[0].style.display == 'block')) ||
     ((radio2[1].style.display == 'block') && (radio3[1].style.display == 'block')) ||
     ((radio2[2].style.display == 'block') && (radio3[2].style.display == 'block'))) {
-    playagain.textContent = "TRY AGAIN";
+    playagain.textContent = "TRY";
     playagain.style.backgroundColor = "hsl(229, 96%, 51%)";
     playagain.style.fontSize = "30px";
     playagain.style.color = "white";
