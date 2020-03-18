@@ -7,7 +7,18 @@ function score() {
   result = result + 1;
   document.getElementById('score').textContent = result;
 }
+function Egal() {
+  var playagain = document.getElementById("play-again");
+  if (((radio2[0].style.display == 'block') && (radio3[0].style.display == 'block')) ||
+    ((radio2[1].style.display == 'block') && (radio3[1].style.display == 'block')) ||
+    ((radio2[2].style.display == 'block') && (radio3[2].style.display == 'block'))) {
+    playagain.textContent = "TRY AGAIN";
+    playagain.style.backgroundColor = "hsl(229, 96%, 51%)";
+    playagain.style.fontSize = "30px";
+    playagain.style.color = "white";
 
+  }
+}
 function You_Win() {
   var picked2 = document.getElementById("picked2");
   if (((radio2[0].style.display == 'block') && (radio3[1].style.display == 'block')) ||
@@ -57,11 +68,12 @@ function jouer() {
   cpuChois();
   You_Win();
   You_Lost();
+  Egal();
 }
 function rules() {
   form = document.getElementById('form-popup');
   form.style.display = "block";
 }
 function play_again() {
-    location.reload();
-  }
+  location.reload();
+}
